@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+html{
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+body{
+  background-color: hsl(226, 43%, 10%);
+  font-family: 'Rubik', sans-serif;
+  color: white;
 }
+.main-div{
+  
+  width: 80%;
+  margin: 10em auto;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+}
+@media(max-width:700px){
+  html{
+    font-size: 13px;
+  }
+  .main-div{
+    display: grid;
+    grid-template-columns: 1fr ;
+    margin:5em auto;
+    height: auto;
+    
+  }
+  .side-above-1{
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+}
+.left-div{
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  
+}
+.left-div-top{
+  border-radius: 10px;
+  background-color:  hsl(246, 80%, 60%);
+  z-index: 1;
+  padding: .5em 1em;
+  display: grid;
+  align-items: center;
+}
+.name{
+  font-size: 2em;
+  font-weight: 300;
+  margin-top:2px
+}
+.assign{
+  font-size: .725em;
+  font-weight: 100;
+  color: rgb(211, 211, 211);
+}
+.image{
+  width: 25%;
+}
+.left-div-bottom{
+  background-color:  hsl(235, 46%, 20%);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.estimation{
+  padding: 0px 20px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  font-size: .8em;
+  cursor: pointer;
+}
+.side-div-container{
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.side-above{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:15px
+}
+.icon{
+height: 100%;
+width: 20%;
+position: absolute;
+right: 3px;
+top: 0px;
+z-index: 0;
+}
+.ellipsis-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.dots{
+  padding-left: 60%;
+  padding-right: 20%;
+  overflow: hidden;
+}
+.last-seen{
+  font-size: .6rem;
+  margin: 10px 0px;
+}
+.total-hrs{
+  font-weight: 100;
+  font-size: 2.5rem;
+  margin: 0;
+}
+.side-above-1{
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+@media(max-width:750px){
+  .side-above-1{
+    display: grid;
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.side-top-1{
+  background-color: hsl(15, 100%, 70%);
+  border-radius:5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  position:relative;
+ 
+}
+.side-top-2{
+    background-color:hsl(195, 74%, 62%) ;
+    border-radius:5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    position:relative;
+}
+.side-top-3{
+    background-color: hsl(348, 100%, 68%);
+    border-radius:5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    position:relative;
+}
+.side-below{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap: 15px;
+}
+.side-below-1{
+background-color: hsl(145, 58%, 55%);
+border-radius:10px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+position:relative;
+}
+.side-below-2{
+ background-color: hsl(264, 64%, 52%); 
+ border-radius:10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  position:relative;
+}
+.side-below-3{
+ background-color: hsl(43, 84%, 65%); 
+ border-radius:10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  position:relative;
+}
+.side-top-below-1,
+.side-top-below-2,
+.side-top-below-3,
+.side-bottom-below-1,
+.side-bottom-below-2,
+.side-bottom-below-3{
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+  cursor: pointer;
+  padding-left: 15px;
+}
+.side-top-below-1:hover,
+.side-top-below-2:hover,
+.side-top-below-3:hover,
+.side-bottom-below-1:hover,
+.side-bottom-below-2:hover,
+.side-bottom-below-3:hover{
+  background-color: hsl(235, 36%, 36%)
+}
+.side-top-above{
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  
 }
